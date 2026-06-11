@@ -2,7 +2,8 @@
 
 NC_PATH="/var/www/nextcloud"
 LAYOUT_FILE="$NC_PATH/core/templates/layout.user.php"
-BACKUP_DIR="$NC_PATH/backups"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+BACKUP_DIR="$SCRIPT_DIR/backups"
 GOLDEN_BACKUP="$BACKUP_DIR/layout.user.php.original_gold"
 
 if [ -f "$GOLDEN_BACKUP" ]; then
